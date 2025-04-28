@@ -1,0 +1,13 @@
+*.mp4
+*.pdf
+*.png
+*.jpeg
+*.jpg
+*.docx
+clippings/
+models/
+pdfs/
+pdfs_/
+uploads/
+openai/
+.env

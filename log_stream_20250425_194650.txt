@@ -1,0 +1,100 @@
+D:\a\_work\1\s\build_scripts\windows\artifacts\cli\Lib\site-packages\paramiko/pkey.py:100: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+D:\a\_work\1\s\build_scripts\windows\artifacts\cli\Lib\site-packages\cryptography/hazmat/backends/openssl/backend.py:8: UserWarning: You are using cryptography on a 32-bit Python on a 64-bit Windows Operating System. Cryptography will be significantly faster if you switch to using a 64-bit Python.
+D:\a\_work\1\s\build_scripts\windows\artifacts\cli\Lib\site-packages\paramiko/transport.py:259: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from this module in 48.0.0.
+WARNING: 2025-04-25T22:46:58  Welcome, you are now connected to log-streaming service.
+Starting Log Tail -n 10 of existing logs ----
+/appsvctmp/volatile/logs/runtime/container.log
+WARNING: 2025-04-25T22:22:43.4983435Z INFO:     169.254.129.1:16855 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:26:49.6967437Z INFO:     169.254.129.1:61227 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:27:43.6632123Z INFO:     169.254.129.1:47685 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:32:43.8395690Z INFO:     169.254.129.1:50123 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:37:44.4984191Z INFO:     169.254.129.1:27041 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:40:38.5710259Z INFO:     169.254.129.1:38133 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:40:52.2396336Z INFO:     169.254.129.1:19545 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:42:44.6950616Z INFO:     169.254.129.1:37045 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:44:29.6535241Z INFO:     169.254.129.1:30079 - "GET / HTTP/1.1" 404 Not Found
+2025-04-25T22:46:55.7245544Z INFO:     169.254.129.1:31351 - "GET / HTTP/1.1" 404 Not Found
+/appsvctmp/volatile/logs/runtime/container.2.log
+WARNING: 2025-04-24T13:15:10.5572134Z 2025-04-24 13:15:10,557 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-24T13:15:10.5577548Z 2025-04-24 13:15:10,557 - INFO - Retrying request to /chat/completions in 0.491719 seconds
+2025-04-24T13:15:10.9935598Z 2025-04-24 13:15:10,992 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-24T13:15:10.9936064Z 2025-04-24 13:15:10,993 - INFO - Retrying request to /chat/completions in 0.894684 seconds
+2025-04-24T13:15:11.1444996Z 2025-04-24 13:15:11,144 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-24T13:15:11.1452868Z 2025-04-24 13:15:11,145 - INFO - Retrying request to /chat/completions in 0.797112 seconds
+2025-04-24T13:15:11.3300455Z 2025-04-24 13:15:11,329 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-04-24T13:15:11.3309195Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_119.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+2025-04-24T13:15:11.3309342Z ?????? Tier de armazenamento alterado para Archive para o blob: Quarentena/1990_06_pasta_01_119.pdf
+2025-04-24T13:15:11.3309395Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_079.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+WARNING: /appsvctmp/volatile/logs/runtime/container.1.log
+WARNING: 2025-04-24T13:45:47.2913850Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_155.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+2025-04-24T13:45:47.2913879Z ?????? Tier de armazenamento alterado para Archive para o blob: Quarentena/1990_06_pasta_01_155.pdf
+2025-04-24T13:45:47.2913924Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_019.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+2025-04-24T13:45:47.2913981Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_019.pdf_page_2: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+2025-04-24T13:45:47.2914010Z ?????? Tier de armazenamento alterado para Archive para o blob: Quarentena/1990_06_pasta_01_019.pdf
+2025-04-24T13:45:47.2914055Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_156.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+2025-04-24T13:45:47.2914084Z ?????? Tier de armazenamento alterado para Archive para o blob: Quarentena/1990_06_pasta_01_156.pdf
+2025-04-24T13:45:47.2914131Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_020.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+2025-04-24T13:45:47.2914160Z ?????? Tier de armazenamento alterado para Archive para o blob: Quarentena/1990_06_pasta_01_020.pdf
+2025-04-24T13:45:47.2914217Z ??? Erro ao chamar a OpenAI API para Nao_Processados/1990_06_pasta_01_157.pdf_page_1: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+🔴 ALERTA: Erro 429 detectado!
+Ending Log Tail of existing logs ---
+Starting Live Log Stream ---
+WARNING: 2025-04-25T22:47:44.8800626Z INFO:     169.254.129.1:37539 - "GET / HTTP/1.1" 404 Not Found
+WARNING: 2025-04-25T22:48:08.6926682Z 2025-04-25 22:48:08,692 - INFO - ? AZURE_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=iqjstorage;AccountKey=D7/Be67AtyEblxsHsfeWt2+O5/Ytwyw37f6oMMEcNQmxYDw4HtPK4HjEhnEOKKRB6CJ99OCxbeEr+AStS0g3bg==;EndpointSuffix=core.windows.net
+2025-04-25T22:48:08.6927153Z 2025-04-25 22:48:08,692 - INFO - ? Modo de execução: Homologação
+2025-04-25T22:48:08.7951931Z 2025-04-25 22:48:08,794 - INFO - ? Total de arquivos encontrados: 3
+2025-04-25T22:48:08.7958775Z >>> Tipo de self.client: <class 'openai.OpenAI'>
+2025-04-25T22:48:08.7959055Z
+Processando arquivos do Blob:   0%|          | 0/3 [00:00<?, ?it/s]2025-04-25 22:48:08,795 - INFO - ? Processando: 1988/1988_06_pasta_01_001.pdf
+2025-04-25T22:48:09.7680620Z 2025-04-25 22:48:09,767 - INFO - ? Total de páginas convertidas do PDF 1988/1988_06_pasta_01_001.pdf: 2
+WARNING: 2025-04-25T22:48:25.7730826Z 2025-04-25 22:48:25,772 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:48:28.4476309Z 2025-04-25 22:48:28,447 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:48:28.4490584Z
+Processando arquivos do Blob:  33%|????      | 1/3 [00:19<00:39, 19.65s/it]2025-04-25 22:48:28,448 - INFO - ? Processando: 1988/1988_06_pasta_01_002.pdf
+WARNING: 2025-04-25T22:48:29.6344478Z 2025-04-25 22:48:29,634 - INFO - ? Total de páginas convertidas do PDF 1988/1988_06_pasta_01_002.pdf: 2
+WARNING: 2025-04-25T22:48:42.1082096Z INFO:     169.254.129.1:57153 - "GET / HTTP/1.1" 404 Not Found
+WARNING: 2025-04-25T22:48:50.2477370Z 2025-04-25 22:48:50,247 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING: 2025-04-25T22:48:53.6190142Z 2025-04-25 22:48:53,618 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:48:53.6199538Z
+Processando arquivos do Blob:  67%|???????   | 2/3 [00:44<00:22, 22.90s/it]2025-04-25 22:48:53,619 - INFO - ? Processando: 1988/1988_06_pasta_01_003.pdf
+2025-04-25T22:48:54.1069022Z 2025-04-25 22:48:54,106 - INFO - ? Total de páginas convertidas do PDF 1988/1988_06_pasta_01_003.pdf: 1
+WARNING: 2025-04-25T22:49:06.7091975Z 2025-04-25 22:49:06,708 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:49:06.7106745Z
+Processando arquivos do Blob: 100%|??????????| 3/3 [00:57<00:00, 18.42s/it]
+Processando arquivos do Blob: 100%|??????????| 3/3 [00:57<00:00, 19.31s/it]
+2025-04-25T22:49:06.7135161Z 2025-04-25 22:49:06,710 - INFO - ? Total de textos extraídos: 5
+WARNING: 2025-04-25T22:49:11.7128681Z 2025-04-25 22:49:11,712 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:49:12.6729300Z 2025-04-25 22:49:12,672 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING: 2025-04-25T22:49:18.3991828Z 2025-04-25 22:49:18,398 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING: 2025-04-25T22:49:19.3054007Z 2025-04-25 22:49:19,305 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:49:21.8042975Z 2025-04-25 22:49:21,686 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-25T22:49:21.8044307Z 2025-04-25 22:49:21,703 - ERROR - Unclosed client session
+2025-04-25T22:49:21.8044383Z client_session: <aiohttp.client.ClientSession object at 0x7690e0dc8d70>
+2025-04-25T22:49:21.8044411Z 2025-04-25 22:49:21,703 - ERROR - Unclosed client session
+2025-04-25T22:49:21.8044485Z client_session: <aiohttp.client.ClientSession object at 0x7690e36b9100>
+2025-04-25T22:49:21.9466750Z 2025-04-25 22:49:21,946 - ERROR - Unclosed client session
+2025-04-25T22:49:21.9467302Z client_session: <aiohttp.client.ClientSession object at 0x7690e0dd9a30>
+2025-04-25T22:49:21.9471452Z ?? Blob já existe e overwrite=False: teste/1988_06_pasta_01/1988_06_pasta_01.xlsx
+2025-04-25T22:49:21.9471653Z ? 1988/1988_06_pasta_01_001.pdf copiado para teste/1988_06_pasta_01_001.pdf
+2025-04-25T22:49:21.9471686Z ? 1988/1988_06_pasta_01_002.pdf copiado para teste/1988_06_pasta_01_002.pdf
+2025-04-25T22:49:21.9471712Z ? 1988/1988_06_pasta_01_003.pdf copiado para teste/1988_06_pasta_01_003.pdf
+2025-04-25T22:49:21.9471740Z ? Processamento concluído! 3 arquivos processados, 2 ignorados.
+2025-04-25T22:49:21.9471769Z ?? Blob já existe e overwrite=False: teste/1988_06_pasta_01.xlsx
+2025-04-25T22:49:21.9471799Z ?? Planilha salva no Blob Storage: teste/1988_06_pasta_01.xlsx
+2025-04-25T22:49:21.9471851Z ? 1988/1988_06_pasta_01_001.pdf copiado para teste/1988_06_pasta_01_001.pdf
+2025-04-25T22:49:21.9471879Z ? 1988/1988_06_pasta_01_002.pdf copiado para teste/1988_06_pasta_01_002.pdf
+2025-04-25T22:49:21.9471907Z ? 1988/1988_06_pasta_01_003.pdf copiado para teste/1988_06_pasta_01_003.pdf
+2025-04-25T22:49:21.9471933Z ? Arquivos processados foram movidos!
+2025-04-25T22:49:21.9471967Z INFO:     169.254.129.1:17711 - "POST /extrai-logo?modo=h&input_folder=1988&destino_planilha=teste&destino_final=teste&quarantine_folder=Quarentena HTTP/1.1" 200 OK
+WARNING: 2025-04-25T22:50:58  No new trace in the past 1 min(s).
+WARNING: 2025-04-25T22:51:13.7220913Z INFO:     169.254.129.1:44627 - "GET / HTTP/1.1" 404 Not Found
+WARNING: 2025-04-25T22:52:45.0482325Z INFO:     169.254.129.1:48611 - "GET / HTTP/1.1" 404 Not Found
+WARNING: 2025-04-25T22:53:58  No new trace in the past 1 min(s).
+WARNING: 2025-04-25T22:54:58  No new trace in the past 2 min(s).
