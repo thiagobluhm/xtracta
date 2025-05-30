@@ -5,8 +5,8 @@ import glob
 import subprocess
 from streamlit_autorefresh import st_autorefresh
 
-st.set_page_config(page_title="Log Xtracta", page_icon="📄")
-st.title("📄 Xtracta Logger")
+st.set_page_config(page_title="Logger Xtracta", page_icon="📄")
+st.title("📄 Logger Xtracta")
 
 # Inicializa controle
 if "captura_iniciada" not in st.session_state:

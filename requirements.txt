@@ -27,3 +27,4 @@ uvicorn==0.29.0
 
 #INTERFACE
 streamlit
+streamlit-autorefresh
