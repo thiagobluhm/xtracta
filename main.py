@@ -7,6 +7,18 @@ import os
 
 # Precisa vir antes de qualquer comando Streamlit
 st.set_page_config(page_title="Xtracta App", layout="wide")
+def fix_streamlit_theme_dark():
+    st.markdown("""
+        <style>
+        html, body, [data-testid="stAppViewContainer"] {
+            background-color: #0b0f1a !important;
+            color: #e5e7eb !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+fix_streamlit_theme_dark()
+
 
 def load_css(css_file):
     with open(css_file) as f:

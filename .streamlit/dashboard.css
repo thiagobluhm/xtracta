@@ -1,10 +1,9 @@
 /* ================== TEMA GERAL ================== */
-body, html, [data-testid="stAppViewContainer"] {
-    background-color: #0d1117 !important;
-    color: #e6edf3 !important;
-    font-family: 'Segoe UI', sans-serif;
+/* Impede modo light, força o tema escuro geral */
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #0b0f1a !important;
+    color: #e5e7eb !important;
 }
-
 /* ================== CABEÇALHO ================== */
 header[data-testid="stHeader"] {
     background: none !important;
@@ -27,13 +26,13 @@ p, span, div, label, input, textarea, .css-10trblm {
 }
 
 /* ================== TEXTAREA ================== */
+/* Corrige fundo da textarea */
 .stTextArea textarea {
-    background-color: #161b22 !important;
-    color: #e6edf3 !important;
-    border: 1px solid #30363d !important;
-    border-radius: 6px !important;
-    font-family: 'Fira Code', monospace;
+    background-color: #1f2937 !important;
+    color: #e5e7eb !important;
+    border: 1px solid #374151;
 }
+
 
 /* ================== CAMPOS DE LOGIN ================== */
 input[type="text"], input[type="password"], input[type="email"] {
@@ -124,4 +123,24 @@ img[alt="IQJ Logo"] {
     max-width: 200px;
     height: auto;
     margin: 0 auto;
+}
+
+
+/* Corrige cor de botões em qualquer modo */
+button, .stButton>button, [data-testid="baseButton-primary"] {
+    color: #00f6ff !important;
+    background-color: #111827 !important;
+    border: 1px solid #00f6ff !important;
+}
+
+/* Corrige texto do botão de download */
+button[title="Download"] {
+    color: #00f6ff !important;
+    background-color: #1f2937 !important;
+    border: 1px solid #00f6ff !important;
+}
+
+button[title="Download"]:hover {
+    background-color: #00f6ff !important;
+    color: #0b0f1a !important;
 }
