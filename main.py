@@ -10,6 +10,7 @@ import os
 load_dotenv()
 
 password_hash = os.environ.get("THIAGO_PASSWORD_HASH")
+# Configurações de autenticação (sem 'preauthorized')
 config = {
     'credentials': {
         'usernames': {
@@ -22,11 +23,8 @@ config = {
     },
     'cookie': {
         'name': 'xtracta_login',
-        'key': 'supersecretkey123',  # Troque por uma key mais segura em produção
+        'key': 'supersecretkey123',
         'expiry_days': 1
-    },
-    'preauthorized': {
-        'emails': []
     }
 }
 
