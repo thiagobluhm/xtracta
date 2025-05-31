@@ -36,7 +36,7 @@ authenticator = stauth.Authenticate(
 )
 
 
-name, auth_status = authenticator.login(location='main', fields={'Form name': 'Login'})
+name, auth_status = authenticator.login(location='main')
 
 
 
