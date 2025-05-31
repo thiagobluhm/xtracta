@@ -6,14 +6,9 @@ from azure.storage.blob import BlobServiceClient
 from streamlit_autorefresh import st_autorefresh
 
 
-
-st.set_page_config(page_title="LoggerXtracta", page_icon="📄", layout="wide")
 # Configura layout largo
-def load_css(path):
-    with open(path) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+st.set_page_config(page_title="LoggerXtracta", page_icon="📄", layout="wide")
 
-load_css(".streamlit/dashboard.css")  # ou logger.css
 
 def logs_alerta():
     

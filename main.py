@@ -63,7 +63,7 @@ elif auth_status is None:
 elif auth_status:
     st.sidebar.success(f"Bem-vindo, {name} 👋")
     authenticator.logout("Logout", "sidebar")
-    load_css("dashboard.css")
+    load_css(".streamlit/dashboard.css")
     # Aqui vai seu app    
     logs_alerta()
 
