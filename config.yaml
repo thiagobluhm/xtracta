@@ -1,0 +1,18 @@
+credentials:
+  usernames:
+    thiago:
+      email: thiagobluhm@gmail.com
+      name: Thiago Bluhm
+      password: '123456789'  # SHA512
+    maria:
+      email: maria@empresa.com
+      name: Maria Silva
+      password: '$6$rounds=656000$GZP...'
+
+cookie:
+  name: xtracta_login
+  key: supersecretkey123  # 🔒 altere isso
+  expiry_days: 1
+
+preauthorized:
+  emails: []
