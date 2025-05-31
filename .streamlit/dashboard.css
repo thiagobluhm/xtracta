@@ -50,23 +50,16 @@ input::placeholder {
 
 /* ================== BOTÕES ================== */
 .stButton>button {
-    background: transparent;
-    color: #ffffff;
+    background: #00b4d8;
+    color: #000000;
     border: none;
     padding: 0.5rem 1rem;
     transition: background 0.2s ease-in-out;
 }
 
-.stButton>button {
-    background: #00b4d8;
-    color: #0d1117;
-    font-weight: bold;
-}
-
-
 .stButton>button:hover {
     background: #00b4d8;
-    color: #0ec1e0;
+    color: #aff0fc;
     font-weight: bold;
 }
 
