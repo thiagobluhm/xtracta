@@ -57,7 +57,7 @@ def logs_alerta():
 
             st.subheader("📋 Conteúdo Formatado")
             st.text_area("Log Processado", value=texto_formatado.strip(), height=300)
-            st.success(f"📄 Último log: `{blob_mais_recente.name}`")
+            st.success(f"📄 Último log: `{blob_mais_recente.name.split("SITES/")[1]}`")
             st.download_button(
                 label="📥 Baixar como .TXT",
                 data=texto_formatado,
