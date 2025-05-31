@@ -5,17 +5,20 @@ from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
 from streamlit_autorefresh import st_autorefresh
 
-
-# Configura layout largo
+# Configura layout largo — precisa ser o primeiro comando
 st.set_page_config(page_title="LoggerXtracta", page_icon="📄", layout="wide")
 
+# Logo na sidebar
+st.sidebar.image(
+    "https://www.institutoqueirozjereissati.org.br/wp-content/uploads/2024/07/IQJ.png",
+    use_column_width=True
+)
 
 def logs_alerta():
-    
     st.title("📄 Logger Xtracta")
     st.write("Página com refresh a cada 10 segundos.")
 
-    # 🔄 Atualiza automaticamente
+    # Atualiza automaticamente a cada 10 segundos
     st_autorefresh(interval=10 * 1000, key="log_auto_refresh")
 
     # Carrega variáveis do .env
@@ -40,6 +43,7 @@ def logs_alerta():
             blob_client = container_client.get_blob_client(blob_mais_recente.name)
             blob_content = blob_client.download_blob().readall().decode("utf-8", errors="ignore")
 
+            # Processa conteúdo
             linhas = blob_content.strip().split("\n")
             texto_formatado = ""
 
@@ -49,7 +53,7 @@ def logs_alerta():
                     timestamp = obj.get("time", "")
                     descricao = obj.get("resultDescription", "")
                     if timestamp and descricao:
-                        texto_formatado += f"🕒 {timestamp}\n{descricao}\n\n"
+                        texto_formatado += f"🕒 {timestamp}\nINFO:  {descricao}\n\n"
                 except json.JSONDecodeError:
                     continue
 
@@ -57,8 +61,10 @@ def logs_alerta():
                 texto_formatado = "⚠️ Nenhum conteúdo formatado encontrado."
 
             st.subheader("📋 Conteúdo Formatado")
-            st.text_area("Log Processado", value=texto_formatado.strip(), height=300)
-            st.success(f"📄 Último log: `{blob_mais_recente.name.split("SITES/")[1]}`")
+            st.code(texto_formatado.strip(), language="text")
+
+            st.success(f"📄 Último log: `{blob_mais_recente.name.split('SITES/')[-1]}`")
+
             st.download_button(
                 label="📥 Baixar como .TXT",
                 data=texto_formatado,
@@ -68,6 +74,7 @@ def logs_alerta():
 
     except Exception as e:
         st.error(f"❌ Erro ao acessar ou processar blob: {e}")
+
 
 # Roda se estiver sendo executado diretamente
 # if __name__ == "__main__":
