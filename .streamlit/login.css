@@ -1,0 +1,40 @@
+/* Fundo escuro, visual clean */
+body {
+    background-color: #0d1117;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+}
+
+.block-container {
+                    max-width: 40%;
+                    margin: auto;
+                }
+
+[data-testid="stAppViewContainer"] {
+    padding: 2rem 5rem;
+    background-color: #0d1117;
+    background-image: radial-gradient(circle at 30% 30%, #1a1f2e 0%, #0d1117 100%);
+}
+
+h1, h2, h3 {
+    color: #58a6ff;
+}
+
+input, button, label {
+    font-size: 1rem;
+}
+
+button {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    padding: 0.6em 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #30363d;
+    color: #ffffff;
+    border-color: #58a6ff;
+}
