@@ -121,9 +121,9 @@ html, body {
 
 /* 🔧 Garante largura fixa da sidebar SEM alterar ao passar o mouse */
 section[data-testid="stSidebar"] {
-    min-width: 300px !important;
-    max-width: 300px !important;
-    width: 300px !important;
+    min-width: 450px !important;
+    max-width: 450px !important;
+    width: 450px !important;
     transition: none !important; /* evita animações indesejadas */
     overflow-x: hidden;
 }
