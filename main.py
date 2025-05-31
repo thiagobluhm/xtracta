@@ -36,13 +36,14 @@ authenticator = stauth.Authenticate(
 )
 
 
-auth_status= authenticator.login(location='main')
+name, auth_status= authenticator.login('main', 'Login')
 
 
 if auth_status is False:
     st.error("Usuário ou senha incorretos.")
 elif auth_status is None:
     st.warning("Por favor, insira suas credenciais.")
+    st.write(auth_status)
 elif auth_status:
     st.sidebar.success(f"Bem-vindo, {name} 👋")
     authenticator.logout("Logout", "sidebar")
