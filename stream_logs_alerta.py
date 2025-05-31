@@ -56,7 +56,7 @@ def logs_alerta():
                 texto_formatado = "⚠️ Nenhum conteúdo formatado encontrado."
 
             st.subheader("📋 Conteúdo Formatado")
-            st.text_area("Log Processado", value=texto_formatado.strip(), height=400)
+            st.text_area("Log Processado", value=texto_formatado.strip(), height=300)
             st.success(f"📄 Último log: `{blob_mais_recente.name}`")
             st.download_button(
                 label="📥 Baixar como .TXT",
