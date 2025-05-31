@@ -61,6 +61,15 @@ elif auth_status is None:
     st.warning("Por favor, insira suas credenciais.")
     
 elif auth_status:
+    st.sidebar.markdown(
+        """
+        <div style="text-align: center; margin-bottom: 1rem;">
+            <img src="https://www.institutoqueirozjereissati.org.br/wp-content/uploads/2024/07/IQJ.png" 
+                width="150" style="border-radius: 10px;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     st.sidebar.success(f"Bem-vindo, {name} 👋")
     authenticator.logout("Logout", "sidebar")
     load_css(".streamlit/dashboard.css")
