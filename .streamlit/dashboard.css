@@ -119,15 +119,14 @@ html, body {
     filter: invert(100%);
 }
 
-/* Sidebar com largura fixa, sem efeito de expansão ao hover */
-[data-testid="stSidebar"] {
+/* 🔧 Garante largura fixa da sidebar SEM alterar ao passar o mouse */
+section[data-testid="stSidebar"] {
     min-width: 300px !important;
     max-width: 300px !important;
     width: 300px !important;
-    transition: none !important;
-    overflow-x: hidden !important;
+    transition: none !important; /* evita animações indesejadas */
+    overflow-x: hidden;
 }
-
 [data-testid="collapsedControl"] {
     display: none !important; /* remove botão de colapsar */
 }
