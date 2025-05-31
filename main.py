@@ -3,6 +3,7 @@ import streamlit_authenticator as stauth
 from yaml import safe_load
 from stream_logs_alerta import logs_alerta
 from dotenv import load_dotenv
+import os
 
 # Configuração de usuários e senhas (hash SHA512 gerado antes)
 # Carrega variáveis do .env
