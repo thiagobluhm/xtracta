@@ -51,3 +51,6 @@ elif auth_status:
     # Aqui vai seu app    
     logs_alerta()
 
+# import streamlit_authenticator as stauth
+# hashes = stauth.Hasher(['Ogaith@248#$']).generate()
+# print(hashes[0])
