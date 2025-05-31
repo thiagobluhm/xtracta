@@ -8,7 +8,7 @@ body {
 
 /* Contêiner central com largura reduzida */
 .block-container {
-    max-width: 40%;
+    max-width: 100%;
     margin: auto;
 }
 

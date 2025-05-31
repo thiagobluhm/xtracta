@@ -109,7 +109,7 @@ html, body {
 
 /* Container central no login (40%) */
 .block-container {
-    max-width: 40%;
+    max-width: 100%;
     margin: auto;
     padding-top: 2rem;
 }
