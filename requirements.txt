@@ -28,7 +28,7 @@ requests
 #INTERFACE
 streamlit
 streamlit-autorefresh
-streamlit_authenticator
+streamlit_authenticator==0.3.3 
 
 # original
 # # Azure e Cloud
