@@ -3,7 +3,13 @@ import streamlit_authenticator as stauth
 from yaml import safe_load
 from stream_logs_alerta import logs_alerta
 from dotenv import load_dotenv
+
 import os
+
+def load_css(css_file):
+    with open(css_file) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 
 # Precisa vir antes de qualquer comando Streamlit
 st.set_page_config(page_title="Xtracta App", layout="wide")
@@ -51,25 +57,13 @@ name, auth_status, username = authenticator.login()
 if auth_status is False:
     st.error("Usuário ou senha incorretos.")
 elif auth_status is None:
-    # Aqui, limitamos a largura com container + CSS
-    with st.container():
-        st.markdown(
-            """
-            <style>
-                .block-container {
-                    max-width: 40%;
-                    margin: auto;
-                }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+    load_css(".streamlit/login.css")
     st.warning("Por favor, insira suas credenciais.")
     
 elif auth_status:
     st.sidebar.success(f"Bem-vindo, {name} 👋")
     authenticator.logout("Logout", "sidebar")
-
+    load_css("dashboard.css")
     # Aqui vai seu app    
     logs_alerta()
 
