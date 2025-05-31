@@ -72,7 +72,7 @@ elif auth_status:
     )
 
     # Boas-vindas e logout
-    st.sidebar.success(f"Bem-vindo, {name} 👋")
+    st.sidebar.success(f"Bem-vindo, {name}")
     authenticator.logout("Logout", "sidebar")
 
     # Carrega visual do dashboard

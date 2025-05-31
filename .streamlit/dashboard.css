@@ -23,7 +23,7 @@ h1, h2, h3 {
 /* ================== TEXTOS ================== */
 p, span, div, label, input, textarea, .css-10trblm {
     color: #e6edf3 !important;
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
 }
 
 /* ================== TEXTAREA ================== */
