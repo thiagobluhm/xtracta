@@ -6,13 +6,13 @@ from dotenv import load_dotenv
 
 import os
 
+
+# Precisa vir antes de qualquer comando Streamlit
+st.set_page_config(page_title="Xtracta App", layout="wide")
 def load_css(css_file):
     with open(css_file) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-
-# Precisa vir antes de qualquer comando Streamlit
-st.set_page_config(page_title="Xtracta App", layout="wide")
 
 # Configuração de usuários e senhas (hash SHA512 gerado antes)
 # Carrega variáveis do .env
