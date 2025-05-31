@@ -5,9 +5,12 @@ from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
 from streamlit_autorefresh import st_autorefresh
 
+
+# Configura layout largo
+st.set_page_config(page_title="LoggerXtracta", page_icon="📄", layout="wide")
+
 def logs_alerta():
-    # Configura layout largo
-    st.set_page_config(page_title="Log Stream Formatado", page_icon="📄", layout="wide")
+    
     st.title("📄 Logger Xtracta")
     st.write("Página com refresh a cada 10 segundos.")
 
