@@ -1,72 +1,11 @@
-/* Força fundo escuro e fonte clara */
+/* ================== TEMA GERAL ================== */
 body, html, [data-testid="stAppViewContainer"] {
     background-color: #0d1117 !important;
     color: #e6edf3 !important;
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Corrige headers */
-h1, h2, h3 {
-    color: #00BFFF !important;
-    text-shadow: 0 0 5px rgba(0, 191, 255, 0.4);
-}
-
-/* Textos */
-span, p, div, label, .css-10trblm {
-    color: #c9d1d9 !important;
-}
-
-/* TextArea */
-.stTextArea textarea {
-    background-color: #161b22 !important;
-    color: #e6edf3 !important;
-    border: 1px solid #30363d !important;
-}
-
-/* Botões */
-.stButton>button, button {
-    background-color: #21262d !important;
-    color: #e6edf3 !important;
-    border: 1px solid #30363d !important;
-    transition: 0.3s ease;
-}
-
-.stButton>button:hover, button:hover {
-    background-color: #00BFFF !important;
-    color: #0d1117 !important;
-}
-
-/* Download button */
-button[title="Download"] {
-    background-color: #21262d !important;
-    border: 1px solid #00BFFF !important;
-    color: #00BFFF !important;
-}
-button[title="Download"]:hover {
-    background-color: #00BFFF !important;
-    color: #0d1117 !important;
-}
-
-/* Alertas */
-[data-testid="stAlert"] {
-    background-color: #1e222a !important;
-    color: #e6edf3 !important;
-    border-left: 4px solid #00BFFF;
-}
-
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background-color: #0d1117 !important;
-    border-right: 1px solid #21262d;
-}
-
-[data-testid="stSidebar"] h1, 
-[data-testid="stSidebar"] h2, 
-[data-testid="stSidebar"] span {
-    color: #58a6ff !important;
-}
-
-/* Remove barra de topo colorida */
+/* ================== CABEÇALHO ================== */
 header[data-testid="stHeader"] {
     background: none !important;
     box-shadow: none !important;
@@ -75,7 +14,107 @@ header[data-testid="stHeader"] > div {
     height: 0rem !important;
 }
 
-/* Scroll oculto opcional */
+/* ================== TÍTULOS ================== */
+h1, h2, h3 {
+    color: #00bcd4 !important;
+    text-shadow: 0 0 6px rgba(0, 188, 212, 0.3);
+}
+
+/* ================== TEXTOS ================== */
+p, span, div, label, input, textarea, .css-10trblm {
+    color: #e6edf3 !important;
+    font-size: 1rem !important;
+}
+
+/* ================== TEXTAREA ================== */
+.stTextArea textarea {
+    background-color: #161b22 !important;
+    color: #e6edf3 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 6px !important;
+    font-family: 'Fira Code', monospace;
+}
+
+/* ================== CAMPOS DE LOGIN ================== */
+input[type="text"], input[type="password"], input[type="email"] {
+    background-color: #161b22 !important;
+    color: #e6edf3 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 6px !important;
+    padding: 0.5rem !important;
+}
+
+input::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* ================== BOTÕES ================== */
+.stButton>button, button {
+    background-color: #21262d !important;
+    color: #00bcd4 !important;
+    border: 1px solid #00bcd4 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.2rem !important;
+    transition: all 0.2s ease;
+}
+
+.stButton>button:hover, button:hover {
+    background-color: #00bcd4 !important;
+    color: #0d1117 !important;
+    font-weight: bold !important;
+}
+
+/* DOWNLOAD BUTTON */
+button[title="Download"] {
+    background-color: #21262d !important;
+    border: 1px solid #00bcd4 !important;
+    color: #00bcd4 !important;
+}
+button[title="Download"]:hover {
+    background-color: #00bcd4 !important;
+    color: #0d1117 !important;
+}
+
+/* ================== ALERTAS ================== */
+[data-testid="stAlert"] {
+    background-color: #1e222a !important;
+    color: #facc15 !important;
+    border-left: 4px solid #facc15;
+    font-size: 0.95rem;
+}
+
+/* ================== SIDEBAR ================== */
+[data-testid="stSidebar"] {
+    background-color: #0d1117 !important;
+    border-right: 1px solid #1f2937;
+}
+
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] span {
+    color: #58a6ff !important;
+}
+
+/* ================== AJUSTES FINAIS ================== */
+
+/* Remove linha superior padrão */
 section.main > div {
     overflow-y: auto !important;
+}
+
+/* Força preenchimento sem scroll */
+html, body {
+    overflow-x: hidden !important;
+}
+
+/* Container central no login (40%) */
+.block-container {
+    max-width: 40%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+/* Alinha ícone de senha */
+.css-1cpxqw2 {
+    filter: invert(100%);
 }

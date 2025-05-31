@@ -1,46 +1,65 @@
+/* Fundo escuro estilizado com a paleta IQJ */
 body {
-    background-color: #0D1117;
+    background-color: #0b0f1a;
+    background-image: radial-gradient(circle at 30% 30%, #1a1f2e 0%, #0b0f1a 100%);
     font-family: 'Segoe UI', sans-serif;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
+/* Contêiner central com largura reduzida */
 .block-container {
     max-width: 40%;
     margin: auto;
 }
 
-[data-testid="stAppViewContainer"] {
-    padding: 2rem 5rem;
-    background-color: #0D1117;
-    background-image: radial-gradient(circle at 30% 30%, #1a1f2e 0%, #0D1117 100%);
-}
-
+/* Remoção da barra superior do Streamlit */
 header[data-testid="stHeader"] {
     background: none;
     box-shadow: none;
 }
+
 header[data-testid="stHeader"] > div {
     height: 0rem;
 }
 
+/* Títulos com cor azul IQJ */
 h1, h2, h3 {
-    color: #009CDE;
+    color: #0585cc;
 }
 
-input, button, label {
-    font-size: 1rem;
-}
-
-button {
-    background-color: #FFC800;
-    color: #0D1117;
+/* Campos de entrada */
+input[type="text"], input[type="password"] {
+    background-color: #111827;
+    color: #f9f9f9;
+    border: 1px solid #0585cc;
     border-radius: 6px;
-    border: none;
-    padding: 0.6em 1.2em;
-    font-weight: bold;
+    padding: 0.5rem;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #94a3b8;
+}
+
+/* Botões */
+button {
+    background-color: #1a202c;
+    color: #ffd200;  /* amarelo IQJ */
+    border-radius: 6px;
+    border: 1px solid #ffd200;
+    padding: 0.6em 1em;
+    transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #009CDE;
-    color: #FFFFFF;
+    background-color: #ffd200;
+    color: #0b0f1a;
+    font-weight: bold;
+}
+
+/* Mensagens de alerta (credenciais ausentes etc) */
+[data-testid="stAlert"] {
+    border-left: 4px solid #ffd200;
+    background-color: #1f2937;
+    color: #ffd200;
+    font-size: 0.9rem;
 }
