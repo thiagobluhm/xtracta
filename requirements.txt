@@ -1,31 +1,64 @@
 # Azure e Cloud
-azure-storage-blob==12.19.1
-python-dotenv==1.0.1
-aiohttp>=3.8.1
+azure-storage-blob
+python-dotenv
+aiohttp
 
 # OCR, PDF e imagem
-pymupdf==1.23.22         # fitz
-pdf2image==1.17.0
-Pillow==10.2.0
-opencv-python-headless==4.9.0.80
+# pymupdf==1.23.22         # fitz
+#pdf2image==1.17.0
+#Pillow==10.2.0
+#opencv-python-headless==4.9.0.80
 
 # IA e OpenAI
-openai==1.75.0
+#openai
 
 # Dados e visualização
-pandas==2.2.1
-openpyxl==3.1.2
+pandas
+openpyxl
 
 # Utilidades e helpers
-numpy==1.26.4
-tqdm==4.66.2
-requests==2.31.0
+numpy
+tqdm
+requests
 
 # Backend API
-fastapi==0.110.2
-uvicorn==0.29.0
+#fastapi
+#uvicorn
 
 #INTERFACE
 streamlit
 streamlit-autorefresh
 streamlit_authenticator
+
+# original
+# # Azure e Cloud
+# azure-storage-blob==12.19.1
+# python-dotenv==1.0.1
+# aiohttp>=3.8.1
+
+# # OCR, PDF e imagem
+# pymupdf==1.23.22         # fitz
+# pdf2image==1.17.0
+# Pillow==10.2.0
+# opencv-python-headless==4.9.0.80
+
+# # IA e OpenAI
+# openai==1.75.0
+
+# # Dados e visualização
+# pandas==2.2.1
+# openpyxl==3.1.2
+
+# # Utilidades e helpers
+# numpy==1.26.4
+# tqdm==4.66.2
+# requests==2.31.0
+
+# # Backend API
+# fastapi==0.110.2
+# uvicorn==0.29.0
+
+# #INTERFACE
+# streamlit
+# streamlit-autorefresh
+# streamlit_authenticator

@@ -36,7 +36,7 @@ authenticator = stauth.Authenticate(
 )
 
 
-name, auth_status, username = authenticator.login('Login', location='main')
+name, auth_status = authenticator.login('Login', location='main')
 
 
 if auth_status is False:

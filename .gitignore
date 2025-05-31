@@ -11,3 +11,4 @@ pdfs_/
 uploads/
 openai/
 .env
+.venv
