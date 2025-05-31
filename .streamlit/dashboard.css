@@ -1,21 +1,22 @@
-/* === ESTILO GERAL === */
 body {
-    background-color: #0b0f1a;
+    background-color: #0D1117;
     font-family: 'Fira Code', monospace;
     color: #e5e7eb;
 }
 
-/* === LAYOUT & FUNDO === */
+section.main > div {
+    overflow-y: auto !important;
+}
+
 html, body, [data-testid="stAppViewContainer"] {
     overflow-y: hidden !important;
 }
 
 [data-testid="stAppViewContainer"] {
-    background: radial-gradient(circle at top left, #1c1f2b 0%, #0b0f1a 100%);
+    background: radial-gradient(circle at top left, #1c1f2b 0%, #0D1117 100%);
     padding: 1rem 2rem;
 }
 
-/* === CABEÇALHO === */
 header[data-testid="stHeader"] {
     background: none;
     box-shadow: none;
@@ -24,74 +25,55 @@ header[data-testid="stHeader"] > div {
     height: 0rem;
 }
 
-/* === TÍTULOS === */
 h1, h2, h3 {
-    color: #00a3e0;
-    text-shadow: 0 0 8px #00a3e055;
+    color: #009CDE;
+    text-shadow: 0 0 10px #009CDE88;
 }
 
-/* === ÁREA DE TEXTO (LOGS) === */
 .stTextArea textarea {
     background-color: #1f2937;
-    color: #e5e7eb;
-    border: 1px solid #374151;
+    color: #FFFFFF;
+    border: 1px solid #009CDE;
     font-size: 0.95rem;
     border-radius: 6px;
 }
 
-/* === TEXTOS DE STATUS / SPAN / CODE === */
-span, code {
-    color: #b0c7d1;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.85rem;
-}
-
-/* === BOTÕES PADRÃO === */
 .stButton > button {
-    background-color: #0b0f1a;
-    color: #00a3e0;
-    border: 1px solid #00a3e0;
+    background-color: #FFC800;
+    color: #0D1117;
+    border: none;
     border-radius: 6px;
     padding: 0.5rem 1.2rem;
-    transition: 0.3s ease;
+    font-weight: bold;
 }
+
 .stButton > button:hover {
-    background-color: #00a3e0;
-    color: #0b0f1a;
-    font-weight: bold;
+    background-color: #009CDE;
+    color: #FFFFFF;
 }
 
-/* === BOTÃO DE DOWNLOAD === */
 button[title="Download"] {
-    background-color: #1a202c !important;
-    border: 1px solid #00a3e0 !important;
-    color: #00a3e0 !important;
-    border-radius: 6px;
-}
-button[title="Download"]:hover {
-    background-color: #00a3e0 !important;
-    color: #0b0f1a !important;
+    background-color: #FFC800 !important;
+    color: #0D1117 !important;
+    border: none;
     font-weight: bold;
 }
 
-/* === SIDEBAR === */
+button[title="Download"]:hover {
+    background-color: #009CDE !important;
+    color: #FFFFFF !important;
+}
+
 [data-testid="stSidebar"] {
-    background: #0d1117;
+    background: #111827;
     border-right: 1px solid #1f2937;
 }
-[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2 {
-    color: #f4b819;
+
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2 {
+    color: #FFC800;
 }
 
-/* === ALERTAS === */
-[data-testid="stAlert"] {
-    border-left: 4px solid #00a3e0;
-    background-color: #1f2937;
-    color: #e5e7eb;
-    font-size: 0.9rem;
-}
-
-/* === SEPARADORES === */
 hr {
     border: none;
     height: 1px;
@@ -99,8 +81,15 @@ hr {
     margin: 1rem 0;
 }
 
-/* === AJUSTE DE CONTAINER PÓS LOGIN === */
-main > div:first-child {
-    padding-top: 1rem !important;
-    margin-top: 0 !important;
+[data-testid="stAlert"] {
+    border-left: 4px solid #009CDE;
+    background-color: #1f2937;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+}
+
+span, code {
+    color: #94a3b8;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
 }
