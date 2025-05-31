@@ -144,3 +144,34 @@ button[title="Download"]:hover {
     background-color: #00f6ff !important;
     color: #0b0f1a !important;
 }
+
+/* Oculta botão de "Favorite" */
+button[title="Favorite this app"], 
+button[aria-label="Favorite this app"] {
+    display: none !important;
+}
+
+/* Oculta botão de edição (pencil) */
+button[title="Edit this app"], 
+button[aria-label="Edit this app"] {
+    display: none !important;
+}
+
+/* Oculta botão do GitHub */
+button[title="View GitHub repository"], 
+button[aria-label="View GitHub repository"] {
+    display: none !important;
+}
+
+/* OPCIONAL: Personaliza o botão de Share */
+button[title="Share this app"] {
+    border: 1px solid #00f6ff !important;
+    background-color: #111827 !important;
+    color: #00f6ff !important;
+}
+
+/* Oculta menu extra "..." */
+button[title="Main menu"], 
+button[aria-label="Main menu"] {
+    display: none !important;
+}
