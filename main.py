@@ -5,6 +5,9 @@ from stream_logs_alerta import logs_alerta
 from dotenv import load_dotenv
 import os
 
+# Configura layout largo
+st.set_page_config(page_title="LoggerXtracta", page_icon="📄")
+
 # Configuração de usuários e senhas (hash SHA512 gerado antes)
 # Carrega variáveis do .env
 load_dotenv()
