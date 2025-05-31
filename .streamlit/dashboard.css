@@ -118,15 +118,3 @@ html, body {
 .css-1cpxqw2 {
     filter: invert(100%);
 }
-
-/* 🔧 Garante largura fixa da sidebar SEM alterar ao passar o mouse */
-section[data-testid="stSidebar"] {
-    min-width: 300px !important;
-    max-width: 300px !important;
-    width: 300px !important;
-    transition:cubic-bezier(1, 0, 0, 1) !important; /* evita animações indesejadas */
-    overflow-x: hidden;
-}
-[data-testid="collapsedControl"] {
-    display: none !important; /* remove botão de colapsar */
-}
