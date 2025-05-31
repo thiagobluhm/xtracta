@@ -49,20 +49,20 @@ input::placeholder {
 }
 
 /* ================== BOTÕES ================== */
-.stButton>button, button {
-    background-color: #21262d !important;
-    color: #00bcd4 !important;
-    border: 1px solid #00bcd4 !important;
-    border-radius: 8px !important;
-    padding: 0.5rem 1.2rem !important;
-    transition: all 0.2s ease;
+.stButton>button {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s ease-in-out;
 }
 
-.stButton>button:hover, button:hover {
-    background-color: #00bcd4 !important;
-    color: #0d1117 !important;
-    font-weight: bold !important;
+.stButton>button:hover {
+    background: #00b4d8;
+    color: #0d1117;
+    font-weight: bold;
 }
+
 
 /* DOWNLOAD BUTTON */
 button[title="Download"] {
