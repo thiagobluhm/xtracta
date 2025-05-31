@@ -66,5 +66,5 @@ def logs_alerta():
         st.error(f"❌ Erro ao acessar ou processar blob: {e}")
 
 # Roda se estiver sendo executado diretamente
-if __name__ == "__main__":
-    logs_alerta()
+# if __name__ == "__main__":
+#     logs_alerta()
