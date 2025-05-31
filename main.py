@@ -61,11 +61,11 @@ elif auth_status is None:
 
 elif auth_status:
     # Logo do IQJ na sidebar
-    st.markdown(
+    st.sidebar.markdown(
         """
-        <div style="display: flex; justify-content: center; align-items: center; margin-top: 1rem; margin-bottom: 2rem;">
-            <img src="https://www.institutoqueirozjereissati.org.br/wp-content/uploads/2024/07/IQJ.png" 
-                style="width: 100%; max-width: 250px; height: auto;" alt="Logo IQJ">
+        <div style="margin-bottom: 1rem; padding: 0 10px;">
+            <img src="https://www.institutoqueirozjereissati.org.br/wp-content/uploads/2024/07/IQJ.png"
+                style="width: 100%; height: auto; display: block; margin: 0 auto;" />
         </div>
         """,
         unsafe_allow_html=True
