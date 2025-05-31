@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
 from streamlit_autorefresh import st_autorefresh
 
+# Configura layout largo — precisa ser o primeiro comando
+st.set_page_config(page_title="LoggerXtracta", page_icon="📄", layout="wide")
 
 # Logo na sidebar
 st.sidebar.image(
