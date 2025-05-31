@@ -3,16 +3,16 @@ credentials:
     thiago:
       email: thiagobluhm@gmail.com
       name: Thiago Bluhm
-      password: '$6$rounds=656000$RIMR3wXWdxtrDu9h$60yFb/Y1O5x/2g7VC2YkSW3Qk9VVnIuhx2B3tkDGheYHZ35OHhR5MmHbVo6GqULte3f7weMQSLqwe6KKo.VJ/1'
+      password: '********'
 
     maria:
       email: maria@empresa.com
       name: Maria Silva
-      password: '$6$rounds=656000$GZP...'
+      password: '********.'
 
 cookie:
   name: xtracta_login
-  key: supersecretkey123  # 🔒 altere isso
+  key: ***********  # 🔒 altere isso
   expiry_days: 1
 
 preauthorized:
