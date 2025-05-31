@@ -118,3 +118,10 @@ html, body {
 .css-1cpxqw2 {
     filter: invert(100%);
 }
+
+/* Logo centralizada e responsiva */
+img[alt="IQJ Logo"] {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
