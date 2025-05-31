@@ -1,95 +1,81 @@
-body {
-    background-color: #0D1117;
-    font-family: 'Fira Code', monospace;
-    color: #e5e7eb;
+/* Força fundo escuro e fonte clara */
+body, html, [data-testid="stAppViewContainer"] {
+    background-color: #0d1117 !important;
+    color: #e6edf3 !important;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-section.main > div {
-    overflow-y: auto !important;
-}
-
-html, body, [data-testid="stAppViewContainer"] {
-    overflow-y: hidden !important;
-}
-
-[data-testid="stAppViewContainer"] {
-    background: radial-gradient(circle at top left, #1c1f2b 0%, #0D1117 100%);
-    padding: 1rem 2rem;
-}
-
-header[data-testid="stHeader"] {
-    background: none;
-    box-shadow: none;
-}
-header[data-testid="stHeader"] > div {
-    height: 0rem;
-}
-
+/* Corrige headers */
 h1, h2, h3 {
-    color: #009CDE;
-    text-shadow: 0 0 10px #009CDE88;
+    color: #00BFFF !important;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.4);
 }
 
+/* Textos */
+span, p, div, label, .css-10trblm {
+    color: #c9d1d9 !important;
+}
+
+/* TextArea */
 .stTextArea textarea {
-    background-color: #1f2937;
-    color: #FFFFFF;
-    border: 1px solid #009CDE;
-    font-size: 0.95rem;
-    border-radius: 6px;
+    background-color: #161b22 !important;
+    color: #e6edf3 !important;
+    border: 1px solid #30363d !important;
 }
 
-.stButton > button {
-    background-color: #FFC800;
-    color: #0D1117;
-    border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1.2rem;
-    font-weight: bold;
+/* Botões */
+.stButton>button, button {
+    background-color: #21262d !important;
+    color: #e6edf3 !important;
+    border: 1px solid #30363d !important;
+    transition: 0.3s ease;
 }
 
-.stButton > button:hover {
-    background-color: #009CDE;
-    color: #FFFFFF;
+.stButton>button:hover, button:hover {
+    background-color: #00BFFF !important;
+    color: #0d1117 !important;
 }
 
+/* Download button */
 button[title="Download"] {
-    background-color: #FFC800 !important;
-    color: #0D1117 !important;
-    border: none;
-    font-weight: bold;
+    background-color: #21262d !important;
+    border: 1px solid #00BFFF !important;
+    color: #00BFFF !important;
 }
-
 button[title="Download"]:hover {
-    background-color: #009CDE !important;
-    color: #FFFFFF !important;
+    background-color: #00BFFF !important;
+    color: #0d1117 !important;
 }
 
+/* Alertas */
+[data-testid="stAlert"] {
+    background-color: #1e222a !important;
+    color: #e6edf3 !important;
+    border-left: 4px solid #00BFFF;
+}
+
+/* Sidebar */
 [data-testid="stSidebar"] {
-    background: #111827;
-    border-right: 1px solid #1f2937;
+    background-color: #0d1117 !important;
+    border-right: 1px solid #21262d;
 }
 
 [data-testid="stSidebar"] h1, 
-[data-testid="stSidebar"] h2 {
-    color: #FFC800;
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] span {
+    color: #58a6ff !important;
 }
 
-hr {
-    border: none;
-    height: 1px;
-    background: #374151;
-    margin: 1rem 0;
+/* Remove barra de topo colorida */
+header[data-testid="stHeader"] {
+    background: none !important;
+    box-shadow: none !important;
+}
+header[data-testid="stHeader"] > div {
+    height: 0rem !important;
 }
 
-[data-testid="stAlert"] {
-    border-left: 4px solid #009CDE;
-    background-color: #1f2937;
-    color: #e5e7eb;
-    font-size: 0.9rem;
-}
-
-span, code {
-    color: #94a3b8;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.85rem;
+/* Scroll oculto opcional */
+section.main > div {
+    overflow-y: auto !important;
 }
