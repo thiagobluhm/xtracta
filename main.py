@@ -10,6 +10,7 @@ import os
 load_dotenv()
 
 password_hash = os.environ.get("THIAGO_PASSWORD_HASH")
+password_hash2 = os.environ.get("VISITANTE_PASSWORD_HASH")
 # Configurações de autenticação (sem 'preauthorized')
 config = {
     'credentials': {
@@ -18,6 +19,11 @@ config = {
                 'email': 'thiagobluhm@gmail.com',
                 'name': 'Thiago Bluhm',
                 'password': password_hash
+            }, 
+            'visitante': {
+                'email': 'visitante@portfoliotech.com',
+                'name': 'Visitante Xtracta',
+                'password': password_hash2
             }
         }
     },
@@ -43,7 +49,6 @@ if auth_status is False:
     st.error("Usuário ou senha incorretos.")
 elif auth_status is None:
     st.warning("Por favor, insira suas credenciais.")
-    st.write(auth_status)
 elif auth_status:
     st.sidebar.success(f"Bem-vindo, {name} 👋")
     authenticator.logout("Logout", "sidebar")
@@ -52,5 +57,5 @@ elif auth_status:
     logs_alerta()
 
 # import streamlit_authenticator as stauth
-# hashes = stauth.Hasher(['Ogaith@248#$']).generate()
+# hashes = stauth.Hasher(['**********']).generate()
 # print(hashes[0])
