@@ -1,4 +1,4 @@
-/* Fundo escuro, visual clean */
+/* === LOGIN VISUAL CLEAN === */
 body {
     background-color: #0d1117;
     font-family: 'Segoe UI', sans-serif;
@@ -6,9 +6,9 @@ body {
 }
 
 .block-container {
-                    max-width: 40%;
-                    margin: auto;
-                }
+    max-width: 40%;
+    margin: auto;
+}
 
 [data-testid="stAppViewContainer"] {
     padding: 2rem 5rem;
@@ -16,25 +16,24 @@ body {
     background-image: radial-gradient(circle at 30% 30%, #1a1f2e 0%, #0d1117 100%);
 }
 
-/* Remove a barra de topo colorida do Streamlit */
 header[data-testid="stHeader"] {
     background: none;
     box-shadow: none;
 }
-
-/* Remove o espaçamento que ficava ali */
 header[data-testid="stHeader"] > div {
     height: 0rem;
 }
 
+/* === TÍTULOS === */
 h1, h2, h3 {
-    color: #58a6ff;
+    color: #00a3e0;
 }
 
 input, button, label {
     font-size: 1rem;
 }
 
+/* === BOTÃO LOGIN === */
 button {
     background-color: #21262d;
     color: #c9d1d9;
@@ -45,7 +44,8 @@ button {
 }
 
 button:hover {
-    background-color: #30363d;
-    color: #ffffff;
-    border-color: #58a6ff;
+    background-color: #00a3e0;
+    color: #0d1117;
+    font-weight: bold;
+    border-color: #f4b819;
 }
