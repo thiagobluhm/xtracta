@@ -1,35 +1,35 @@
+# main.py (Autenticador e Loader do App)
+
 import streamlit as st
 import streamlit_authenticator as stauth
-from yaml import safe_load
 from stream_logs_alerta import logs_alerta
 from dotenv import load_dotenv
 import os
 
-# Precisa vir antes de qualquer comando Streamlit
+# Precisa ser o primeiro comando Streamlit
 st.set_page_config(page_title="Xtracta App", layout="wide")
-def fix_streamlit_theme_dark():
-    st.markdown("""
-        <style>
-        html, body, [data-testid="stAppViewContainer"] {
-            background-color: #0b0f1a !important;
-            color: #e5e7eb !important;
-        }
-        </style>
-    """, unsafe_allow_html=True)
 
-fix_streamlit_theme_dark()
+# Força modo escuro para evitar problemas com legibilidade
+st.markdown("""
+    <style>
+    html, body, [data-testid="stAppViewContainer"] {
+        background-color: #0b0f1a !important;
+        color: #e5e7eb !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
-
+# Carrega CSS
 def load_css(css_file):
     with open(css_file) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Carrega variáveis de ambiente
+# Carrega variáveis do ambiente (.env)
 load_dotenv()
 password_hash = os.environ.get("THIAGO_PASSWORD_HASH")
 password_hash2 = os.environ.get("VISITANTE_PASSWORD_HASH")
 
-# Configurações de autenticação
+# Configura login
 config = {
     'credentials': {
         'usernames': {
@@ -60,35 +60,27 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days'],
 )
 
-# Tela de login
+# Login
 name, auth_status, username = authenticator.login()
 
-# Tratamento do status de login
 if auth_status is False:
     st.error("Usuário ou senha incorretos.")
-
 elif auth_status is None:
     load_css(".streamlit/login.css")
     st.warning("Por favor, insira suas credenciais.")
-
 elif auth_status:
-    # Logo do IQJ na sidebar
+    # Logo responsiva IQJ
     st.sidebar.markdown(
         """
-        <div style="margin-bottom: 1rem; padding: 0 10px;">
+        <div style="padding: 0 10px;">
             <img src="https://www.institutoqueirozjereissati.org.br/wp-content/uploads/2024/07/IQJ.png"
-                style="width: 100%; height: auto; display: block; margin: 0 auto;" />
+                style="width: 100%; height: auto; display: block; margin: 0 auto; max-width: 100%;" />
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    # Boas-vindas e logout
-    st.sidebar.success(f"Bem-vindo, {name}")
+    st.sidebar.success(f"Bem-vindo, {name} 👋")
     authenticator.logout("Logout", "sidebar")
-
-    # Carrega visual do dashboard
     load_css(".streamlit/dashboard.css")
-
-    # Chamada do app principal
     logs_alerta()

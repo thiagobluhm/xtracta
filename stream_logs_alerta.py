@@ -5,15 +5,6 @@ from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
 from streamlit_autorefresh import st_autorefresh
 
-# Configura layout largo — precisa ser o primeiro comando
-st.set_page_config(page_title="LoggerXtracta", page_icon="📄", layout="wide")
-
-# Logo na sidebar
-st.sidebar.image(
-    "https://www.institutoqueirozjereissati.org.br/wp-content/uploads/2024/07/IQJ.png",
-    use_column_width=True
-)
-
 def logs_alerta():
     st.title("📄 Logger Xtracta")
     st.write("Página com refresh a cada 10 segundos.")
@@ -31,51 +22,47 @@ def logs_alerta():
         blob_service = BlobServiceClient.from_connection_string(AZURE_CONNECTION_STRING)
         container_client = blob_service.get_container_client(AZURE_CONTAINER_NAME)
 
-        # Lista apenas arquivos .json
+        # Lista arquivos .json
         blobs = container_client.list_blobs()
         json_blobs = [b for b in blobs if b.name.endswith(".json")]
 
         if not json_blobs:
             st.warning("Nenhum arquivo .json encontrado.")
-        else:
-            # Seleciona o blob mais recente
-            blob_mais_recente = sorted(json_blobs, key=lambda b: b.last_modified)[-1]
-            blob_client = container_client.get_blob_client(blob_mais_recente.name)
-            blob_content = blob_client.download_blob().readall().decode("utf-8", errors="ignore")
+            return
 
-            # Processa conteúdo
-            linhas = blob_content.strip().split("\n")
-            texto_formatado = ""
+        # Seleciona o blob mais recente
+        blob_mais_recente = sorted(json_blobs, key=lambda b: b.last_modified)[-1]
+        blob_client = container_client.get_blob_client(blob_mais_recente.name)
+        blob_content = blob_client.download_blob().readall().decode("utf-8", errors="ignore")
 
-            for linha in linhas:
-                try:
-                    obj = json.loads(linha)
-                    timestamp = obj.get("time", "")
-                    descricao = obj.get("resultDescription", "")
-                    if timestamp and descricao:
-                        texto_formatado += f"🕒 {timestamp}\nINFO:  {descricao}\n\n"
-                except json.JSONDecodeError:
-                    continue
+        # Processa conteúdo
+        linhas = blob_content.strip().split("\n")
+        texto_formatado = ""
 
-            if texto_formatado.strip() == "":
-                texto_formatado = "⚠️ Nenhum conteúdo formatado encontrado."
+        for linha in linhas:
+            try:
+                obj = json.loads(linha)
+                timestamp = obj.get("time", "")
+                descricao = obj.get("resultDescription", "")
+                if timestamp and descricao:
+                    texto_formatado += f"🕒 {timestamp}\nINFO:  {descricao}\n\n"
+            except json.JSONDecodeError:
+                continue
 
-            st.subheader("📋 Conteúdo Formatado")
-            st.code(texto_formatado.strip(), language="text")
+        if texto_formatado.strip() == "":
+            texto_formatado = "⚠️ Nenhum conteúdo formatado encontrado."
 
-            st.success(f"📄 Último log: `{blob_mais_recente.name.split('SITES/')[-1]}`")
+        st.subheader("📋 Conteúdo Formatado")
+        st.code(texto_formatado.strip(), language="text")
 
-            st.download_button(
-                label="📥 Baixar como .TXT",
-                data=texto_formatado,
-                file_name="log_stream_formatado.txt",
-                mime="text/plain"
-            )
+        st.success(f"📄 Último log: `{blob_mais_recente.name.split('SITES/')[-1]}`")
+
+        st.download_button(
+            label="📥 Baixar como .TXT",
+            data=texto_formatado,
+            file_name="log_stream_formatado.txt",
+            mime="text/plain"
+        )
 
     except Exception as e:
         st.error(f"❌ Erro ao acessar ou processar blob: {e}")
-
-
-# Roda se estiver sendo executado diretamente
-# if __name__ == "__main__":
-#     logs_alerta()
