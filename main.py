@@ -159,11 +159,11 @@ else:
         authenticator.logout("Logout", "sidebar")
 
     # Navegação
-    paginas = ["📄 Logs Formatados", "📂 Listar Arquivos"]
+    paginas = ["📄 Logs Formatados", "📂 Arquivos em Quarentena"]
     pagina = st.sidebar.radio("Navegação", paginas, index=0)
 
     # Carrega as páginas com base na seleção
     if pagina == "📄 Logs Formatados":
         logs_alerta()
-    elif pagina == "📂 Listar Arquivos":
+    elif pagina == "📂 Arquivos em Quarentena":
         listar_arquivos()
