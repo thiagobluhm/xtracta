@@ -7,9 +7,8 @@ def load_css(file_name):
     with open(file_name, 'r', encoding='utf-8') as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-
 def listar_arquivos():
-    st.title("📂 Lista de Arquivos")
+    st.title("📂 Arquivos em Quarentena")
     st.write("Arquivos disponíveis na pasta.")
 
     # Carrega variáveis do .env
@@ -45,8 +44,26 @@ def listar_arquivos():
                     f"🕒 Última Modificação: {ultima_modificacao}\n"
                     f"{'-'*40}\n"
                 )
+                
+            if not blobs_ordenados:
+                st.warning("Nenhum arquivo listado.")
+            else:
+                total_arquivos = len(blobs_ordenados)
+
+            col1, col2 = st.columns([2, 1])
+            with col1:
+                st.markdown(f"🔢 Total de arquivos: **{total_arquivos}**")
+            with col2:
+                st.download_button(
+                    label="⬇️ Baixar lista .txt",
+                    data=texto_formatado,
+                    file_name="lista_arquivos.txt",
+                    mime="text/plain"
+                )
 
             st.code(texto_formatado.strip(), language="text")
+            
+            # st.code(texto_formatado.strip(), language="text")
     except Exception as e:
         st.error(f"Erro ao listar arquivos: {e}")
 
