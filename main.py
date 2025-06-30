@@ -95,7 +95,7 @@ from Quarentena import listar_arquivos
 from dotenv import load_dotenv
 import os
 
-st.set_page_config(page_title="Xtracta App", layout="wide")
+st.set_page_config(page_title="Xtracta App", initial_sidebar_state="expanded")
 
 # Carrega CSS
 def load_css(file_name):
